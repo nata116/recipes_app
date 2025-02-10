@@ -1,0 +1,163 @@
+#recipeBox {
+    width: 20px;
+}
+
+.add-recipe-form,
+.profile-info,
+.hidden {
+    display: none;
+}
+
+.show-more-ingr {
+    width: 50vh;
+    height: 25vh;
+}
+
+.show-more-dir {
+    position: relative;
+    overflow: hidden;
+    width: 60vh;
+    height: 20vh;
+}
+
+.show-more-recipe {
+    max-width: 90%;
+    overflow: hidden;
+}
+
+.show-more-dir {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow: auto;
+}
+
+/* Navigation Bar */
+.navbar {
+    z-index: 1001; /* Higher than the form */
+    position: relative; /* Ensure z-index works */
+}
+
+
+/* Hide the form initially */
+.add-recipe-form {
+    display: none;
+    position: relative;
+    z-index: 1000; /* Ensure it appears above other content */
+    margin-top: 20px; /* Add some space below the navigation */
+}
+
+/* Style for the form when visible */
+.add-recipe-form.visible {
+    display: block;
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+}
+
+.img-area {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    align-items: center;
+}
+
+.img-area .icon {
+    font-size: 100px;
+}
+
+.img-area img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 100;
+}
+
+.img-area::before {
+    content: attr(data-img);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: all .3s ease;
+    z-index: 200;
+}
+
+.img-area.active:hover::before {
+    opacity: 1;
+}
+
+.select-image {
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.recipe-img-srch {
+    height: 20vh;
+    width: 20vh;
+}
+
+/* Recipe card container */
+.recipe-srch-data {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.box-rec-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+
+/* Recipe image */
+.recipe-img-srch {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.d-inline-flex.g>div:first-child {
+    font-weight: bold;
+    color: #555555;
+}
+
+.d-inline-flex.g>div:last-child {
+    color: #777777;
+}
+
+/* Add Recipe Form */
+.add-recipe-form ,
+.show-more-recipe{
+    display: none; /* Initially hidden */
+    position: relative; /* Ensure it flows naturally in the document */
+    margin-top: 10px; /* Add space below the navigation */
+    z-index: 1000; /* Ensure it appears above other content if needed */
+}
+
+/* Visible state */
+.add-recipe-form.visible {
+    display: block;
+}
