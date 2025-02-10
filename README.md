@@ -10,8 +10,6 @@ Database (Optional): MySQL / PostgreSQL / H2
 Build Tool: Maven
 
 
-REST POINTS 
-Method	Endpoint	      Description
 GET     /               Opens the login screen
 GET     /home           Opens the home screen
 GET     /login          The user login in the app
